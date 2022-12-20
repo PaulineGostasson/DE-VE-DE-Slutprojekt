@@ -99,8 +99,10 @@ function showLibrary(movies) {
   } else {
     console.log("div finns inte");
     parentDiv = document.createElement("div");
-    parentDivSearched.innerHTML = "";
     parentDiv.id = "parent-div";
+    if (parentDivSearched) {
+      parentDivSearched.innerHTML = "";
+    }
   }
 
   movies.forEach((movie) => {
